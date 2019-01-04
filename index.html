@@ -2,33 +2,43 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>皓東的個人網頁</title>
+  <!--調整內容寬度為裝置寬度；-->
+  <!--設定「CSS 像素」和「裝置像素」的比例為 1:1-->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+
+  <!--告訴文件載入的資源是樣式表，並連到css檔-->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
-   <!-- 其他程式碼 -->
   <link rel="stylesheet" href="css/font-awesome.min.css">
   <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
 </head>
 <body>
-
+ 
   <!--header-->
   <header id="header">
     <div class="container">
-        <nav>
-           <!--補上logo-->
-          </div>
-
-          <ul class="nav">
-            <li><a href="#home">主頁</a></li>
-            <li><a href="#about">關於我</a></li>
-            <li><a href="#service">技能</a></li>
-            <li><a href="#resume">簡歷</a></li>
-            <li><a href="#works">作品集</a></li>
-            <li><a href="#contact">聯繫方式</a></li>
-          </ul>
-        </nav>
+      <button type="button" class="menu-button">
+      三
+      </button>
+      <input type="checkbox" class="menu-button-checkbox">
+      
+      <ul class="nav">
+        <li><a href="#home">主頁</a></li>
+        <li><a href="#about">關於我</a></li>
+        <li><a href="#service">技能</a></li>
+        <li><a href="#resume">簡歷</a></li>
+        <li><a href="#works">作品集</a></li>
+        <li><a href="#contact">聯繫方式</a></li>
+      </ul>
+        
     </div>
   </header> 
+
+
+
 
   <!--Homepage Background Image-->
   <section class="home_bg" id="home">
@@ -63,7 +73,7 @@
         <div class="col-right">
           <div class="personal-info">
             <h3>哈囉!</h3>
-            <p>我的名字是沈皓東，現居宜蘭，目前在大學主修食品科學。我曾是咖啡社的社長與巧焙點心（烘焙）社的美宣。因為畢業後想往科技業發展，所以正在學習相關的知識。我正開始接一些網頁的案子來做來磨練功力，也希望能藉此增進與其他人協作專案的能力。現在在HPX讀書會讀使用者經驗方面的書，希望能成為有產品思維的工程師！</p>
+            <p>我叫沈皓東，是一名內向者。雖然不擅長社交，但溝通沒有問題。希望能持續跨出舒適圈，看見不一樣的風景。總觀自己的經歷，一開始擔任咖啡社的社長，之後被朋友找去烘焙社當美宣。因體會到自身美感的不足。選擇參加洄龜少年推動宜蘭的藝術文化，在舉辦市集時因緣際會下被介紹參加了HPX讀書會，找到自己真的很感興趣的領域。我認為科技可以改變世界，也想在上面投入我的熱情。</p>
           </div>
 
           <div class="button-group">
@@ -85,7 +95,8 @@
         <div class="service-content">
           <i class="fa fa-html5" aria-hidden="true"></i>
           <h3>網頁設計與開發</h3>
-          <p>使用HTML5、CSS開發靜態網站</p>
+          <p>運用HTML5, CSS, 前端框架Bootstrap製作RWD網頁<br>
+             使用Ruby與後端框架Rails開發後端程式</p>
         </div>
 
         <div class="service-content">
@@ -117,7 +128,7 @@
           <div class="resume-detail">
             <h4>國立宜蘭大學</h4>
             <h6>食品科學國立宜蘭大學</h6>
-            <p>運用所學讓自己吃得健康、吃得心安</p>
+            <p>因了解食安、營養方面知識。能運用所學讓自己吃得健康、吃得心安</p>
           </div>
         </div>
 
@@ -126,42 +137,40 @@
           <div class="resume-detail">
             <h4>Alpha camp</h4>
             <h6>網站全端開發</h6>
-            <p>已初步學會HTML與CSS，目前正開始學習SQL、JavaScript、Ruby on Rails</p>
+            <p>已初步學會HTML與CSS並搭配Boostrap製作網頁，目前正開始學習SQL、JavaScript、Ruby on Rails</p>
           </div>
         </div>
-
-        <div class="col-item">
-          <p class="experience-year">2017 - </p>
-          <div class="resume-detail">
-            <h4>開放式課程</h4>
-            <h6>育網、Coursera</h6>
-            <p>已修課：人工智慧與深度學習、食在安心</p>
-            <p>修課中：機器學習基石上、使用者經驗設計、深度學習</p>
-          </div>
-        </div>
-
-        <div class="col-item">
-          <p class="experience-year">2018 - </p>
-          <div class="resume-detail">
-            <h4>HPX讀書會</h4>
-            <h6>使用者經驗設計</h6>
-            <p>勾引效應、遊戲化實戰全書、體驗設計：整合品牌、經驗以及價值的架構</p>
-          </div>
-        </div>
-
-
       </div>
 
       <div class="col-horizontal clearfix">
         <h3 class="resume-subtitle">經歷：</h3>
 
         <div class="col-item">
+          <p class="experience-year">2018 - </p>
+          <div class="resume-detail">
+            <h4>HPX讀書會</h4>
+            <h6>使用者經驗設計</h6>
+            <p>參加3組讀書會，平均每個月共參加5次聚會。主要讀使用者經驗或產品設計方面的書，但也有涉略一些行為經濟學、心理學的書。共計讀了7本書</p>
+          </div>
+        </div>
+
+        <div class="col-item">
+          <p class="experience-year">2018 - </p>
+          <div class="resume-detail">
+            <h4>Originovelty</h4>
+            <h6>行銷部 實習生</h6>
+            <p>研究美國群眾募資平台Kickstarter與競爭品牌，建立資料庫（如Kickstarter人口組成、美國各州文化、競爭品牌廣告策略、募資技巧等）。提供公司在運營、行銷方面的運用。<br>
+               建立顧客旅程地圖，並為每個接觸點設定績效與目標。以利評估行銷成效</p>
+          </div>
+        </div>
+
+        <div class="col-item">
           <p class="experience-year">2016 - 2017</p>
           <div class="resume-detail">
             <h4>咖啡研習社</h4>
             <h6>社長</h6>
-            <p>任內帶領6個幹部、15名社員。舉辦17次社課、4次活動（比賽、營隊、展覽、攤位）<br>
-               參與國立宜蘭大學105學年度社團評鑑獲得優等</p>
+            <p>任內帶領6個幹部、15名社員。舉辦17次社課、4次活動(比賽、營隊、展覽、攤位)。<br>
+               在營隊中，讓家扶中心的孩子們能利用廢棄的咖啡豆做咖啡豆拼貼。除了培養孩子們的美感、廢物再利用的觀念之外。利用社團有限的資源，負擔社會責任，替學校與社團形象加分。在國立宜蘭大學105學年度社團評鑑時獲得評審讚賞，最終得到優等。</p>
           </div>
         </div>
 
@@ -170,17 +179,18 @@
           <div class="resume-detail">
             <h4>巧焙點心與烘焙技術研習社</h4>
             <h6>美宣</h6>
-            <p>總計製作2張海報、4張宣傳單，名牌、獎狀等文宣若干<br>
-               協助活動總招及宣傳進行市場定位、策劃行銷策略，取得共識後進行視覺設計</p>
+            <p>總計製作2張海報、4張宣傳單，名牌、獎狀等文宣若干。<br>
+               協助活動總招及宣傳進行市場定位、策劃行銷策略，取得共識後進行視覺設計。</p>
+               <br><br><br>
           </div>
         </div>
-         <div class="col-item">
+        <div class="col-item">
           <p class="experience-year">2017 - 2017</p>
           <div class="resume-detail">
             <h4>聚焦數位影像工作室</h4>
             <h6>實習生</h6>
-            <p>實際參與2次大型活動紀錄拍攝</p>
-            <p>協助烘焙社拍攝活動宣傳影片。觀看人次1.8k，粉絲專頁貼文觸及率5.8K</p>
+            <p>實際參與 2次大型活動紀錄拍攝。</p>
+            <p>協助烘焙社拍攝活動宣傳影片。觀看人次1.8k，粉絲專頁貼文觸及率5.8K。</p>
           </div>
         </div>
 
@@ -192,6 +202,7 @@
             <p>協助舉辦4次文創市集，擔任對外聯繫的主窗口，工作內容為協調場地、與其他合作夥伴聯繫。</p>
           </div>
         </div>
+
       </div>
     </div>
   </section>
@@ -201,12 +212,12 @@
     <div class="overlay"></div>
     <div class="container">
       <div class="quote-inner">
-        <h3>Let's work together!</h3>
-        <p>I am available for freelance projects</p>
-        <a href="#">get quotes</a>
+        <h3>讓我們一起工作！</h3>
+        <p>我可以根據需求客製化接案</p>
+        <a href="#">報價</a>
       </div>
     </div>
-  </section>-->
+  </section>  -->
   
   <!-- Latest Work -->
     <section class="works" id="works">
@@ -214,19 +225,19 @@
       <h2>作品集</h2>
       <div class="work-items clearfix">
         <div class="col-work"> 
-          <a href="images/portfolio/work 1.jpg">
+          <a href="images/portfolio/work 1.jpg" target="_blank">
             <img src="images/portfolio/work 1.jpg" alt="portfolio-1">
           </a>
         </div>
 
         <div class="col-work">
-          <a href="images/portfolio/work 2.jpg">
+          <a href="images/portfolio/work 2.jpg" target="_blank">
             <img src="images/portfolio/work 2.jpg" alt="portfolio-2">
           </a>
         </div>
-
-        <div class="col-work">   
-          <a href="images/portfolio/work 3.jpg">
+                      
+        <div class="col-work">   <!--target="_blank"   點擊會新開分頁-->
+          <a href="images/portfolio/work 3.jpg" target="_blank">
             <img src="images/portfolio/work 3.jpg" alt="portfolio-3">
           </a>
         </div>
@@ -293,7 +304,10 @@
     </div>
   </footer>
 
-
+  <!-- Bootstrap 插件是基於 jQuery 之上，所以須先引入 jQuery -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <!-- 引入 Bootstrap 插件 -->
+  <script src="charles_website_chinese/js/bootstrap.min.js"></script>
 
 </body>
 </html>

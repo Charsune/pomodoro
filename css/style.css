@@ -67,6 +67,11 @@ section {
   padding: 100px 0;
 }
 
+img {
+  max-width: 100%;
+  height: auto;   
+}
+
 /*=========02. Header ==========*/
 header {
   position: fixed;
@@ -98,7 +103,7 @@ header {
 
 /*=========03. Homepage Background Image ==========*/
 .home_bg{
-  background-image: url(../images/profile.png);
+  background-image:url(../images/profile.png);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -443,10 +448,99 @@ footer {
 
 /*=========rwd==========*/
 
-@media screen and (max-width: 480px) {
+@media screen and (min-width: 768px) {
+  .menu-button,
+  .menu-button-checkbox {
+    display: none;
+  }
+}
+
+
+@media screen and (max-width: 767px) {
+  /*=========02. Header ==========*/
   .container {
     width: auto;
   }
+
+  .menu-button {
+    float: right;
+    font-size: 25px;
+    line-height: 40px;
+    color: white;
+    background: transparent;
+    padding: 0 15px;
+    border: 0;
+  }
+  
+  .menu-button-checkbox {
+    opacity: 0;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 55px;
+    height: 40px;
+  }
+
+  .menu-button-checkbox:checked ~ .nav {
+    display: block;
+  }
+
+
+  .nav {
+    display: none;
+    margin-top: 0;
+    padding-left: 0;
+    position: fixed;
+    right: 0;
+    top: 40px;
+    width: 100px;
+    height: 100%;
+    background: black
+  }
+
+  .nav li {
+    border: 0;
+    border-radius: 0;  
+  }
+
+/*=========03. Homepage Background Image ==========*/
+  .home_bg{
+    width: 100%;  
+  }
+/*=========04. about me==========*/  
+  .col-left {
+    width: 100%; 
+  }
+
+  .avatar { 
+    display: block;
+    margin: 10px auto;
+  }
+  
+  .avatar img{ 
+    width: 60%;
+    margin: 10px auto; 
+  }
+
+  .col-right {
+    width: 100%;
+  }
+
+/*=========05. what i offer==========*/
+ .service-content {
+    width: 100%;
+  }
+/*=========06. resume==========*/
+  .col-horizontal .col-item {
+    width: 100%;
+  }
+
+/*=========08.  Latest Work==========*/
+  .col-work {
+    width: 100%;
+  }
+
+
 }
 
 
