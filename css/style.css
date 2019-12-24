@@ -1,559 +1,452 @@
-/*=========0.1 basic setting ==========*/
-html, body {
-  width: 100%;
-  height: 100%;
-}
-
-body {
-  padding: 0px;
-  margin: 0px;
-  font-size: 14px;
-  line-height: 1.42857143;
-  color: #333;
-  background-color: #fff;
-  font-family: 'Montserrat', sans-serif;
-}
-
-* {
-  box-sizing: border-box;
-}
-
-h1, h2, h3, h4, h5, h6, p {
-  margin: 0px;
-  padding: 0px;
-}
-
-ul, ol {
+/*basic-----------------------------------------------------------------------------------*/
+ol, ul {
   list-style: none;
-  margin: 0px;
-  padding: 0px;
 }
-
-a, a:hover, a:focus {
-  margin: 0px;
-  padding: 0px;
-  text-decoration: none;
-}
-
-img {
-  width: 100%;
-  height: auto;
-  display: block;
-}
-
-.container {
-  width: 85%;
-  max-width: 1170px;
-  margin: 0 auto;
-  position: relative;
-}
-
-.clearfix::after {
-  content: '';
-  display: table;
-  clear: both;
-}
-
-h2 {
-  margin-bottom: 75px;
-  text-align: center;
-  font-size: 40px;
-  line-height: 50px;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-}
-
-section {
-  padding: 100px 0;
-}
-
-img {
-  max-width: 100%;
-  height: auto;   
-}
-
-/*=========02. Header ==========*/
-header {
-  position: fixed;
-  width: 100%;
-  left: 0;
-  right: 0;
-  background-color: #222;
-  z-index: 100;
-}
-
-#logo {
+/*clock-----------------------------------------------------------------------------------*/
+#content .clock {
   float: left;
+  width: 55%;
+  padding: 0 5px;
 }
 
-.nav {
-  float: right;
-}
-
-.nav li {
-  display: inline-block;
-}
-
-.nav li a {
-  color: #fff;
-  text-transform: capitalize;
+.clock-world{
   display: block;
-  padding: 7.5px 12px;
-}
-
-/*=========03. Homepage Background Image ==========*/
-.home_bg{
-  background-image:url(../images/profile.png);
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+  margin-top:135px;
+  margin-left:90px;
   width: 100%;
-  height: 100%; 
 }
 
-.overlay{
-  background: rgba(0, 0, 0, 0.5);
+.clock-world p{
   position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
+  top:194px;
+  left:93px;
+  width:264px;
+  height: 100px;
+  color:#707070;
+  font-family: 'Roboto Mono';
+  font-weight: 500;
+  transform: rotate(15deg);
+  transform-origin:bottom right
 }
 
-.container_table {
-  display: table;
-  width: 100%;
-  height: 100%;
-  position: relative;
+.clock-world p+p{
+  transform: rotate(0deg);
 }
 
-.container_table_cell {
-  display: table-cell;
-  text-align: center;
-  vertical-align: middle;
+.clock-leafs {
+  position: absolute;
+  top: 149px;
+  left: 266px;
 }
+/*clock-leaf1-----------------------------*/
 
-.container_table_cell h2 {
-  color: #fff;
-  text-transform: capitalize;
-  font-size: 54px;
+.clock-leafs .clock-leaf:nth-child(1){
+  position: absolute;
+  display: flex;
+  transform: rotate(200deg);
+  width: 70px;
+  height: 10px;
 }
-
-.social_icons a {
-  color: #fff;
-  display: inline-block;
-  width: 30px;
-  height: 40px;
-  line-height: 40px;
-  font-size: 19px;
-  margin-right: 7px;
-}
-
-/*=========04. about me==========*/
-
-.avatar{
-  width: 60%
-  
-}
-
-.col-left, .col-right {
-  float: left;
+.clock-leafs .clock-leaf:nth-child(1) > * {
   width: 50%;
-  padding: 0 15px;
+  height: 100%;  
+  background: #B18686 0% 0% no-repeat padding-box;
+  border: 1px solid #DCB1B1;
+
+}
+.clock-leafs .clock-leaf:nth-child(1) > :nth-child(1) {
+  border-right: none;
+  border-top-left-radius: 93%;
+  position: relative;
+  left: 1px;
+}
+.clock-leafs .clock-leaf:nth-child(1) > :nth-child(2) {
+  border-left: none;
+  border-top-right-radius: 93%;
 }
 
-.personal-info h3 {
-  font-size: 20px;
-  letter-spacing: 2px;
-  margin-bottom: 6px;
-  text-transform: capitalize;
+
+/*clock-leaf2---------------------------------*/
+
+.clock-leafs .clock-leaf:nth-child(2){
+  position: absolute;
+  display: flex;
+  transform: rotate(92deg);
+  width:47px;
+  height:7px;
+  left:57px;
+  top:-17px;
 }
-
-.personal-info p {
-  color: #767676;
-  line-height: 24px;
-  text-align: justify;
-}
-
-.skill {
-  margin: 30px auto;
-}
-
-.skill li {
-  font-size: 15px;
-  line-height: 35px;
-  text-transform: capitalize;
-}
-
-.button-group .download_cv, .button-group .hire_me {
-  display: inline-block;
-}
-
-.button-group .download_cv {
-  margin-right: 18px;
-}
-
-.button-group a {
-  display: block;
-  color: #000;
-  border: 1px solid #333;
-  border-radius: 10px;
-  padding: 10px 38px;
-  text-transform: capitalize;
-}
-
-/*=========05. what i offer==========*/
-
-.my_service{
-  background-color: #f9f9f9;
-}
-
-.service-content {
-  float: left;
-  width: 33.33333333%;
-  padding: 0 15px;
-}
-
-.service-content i {
-  font-size: 30px;
-  line-height: 46px;
-}
-
-.service-content h3 {
-  font-size: 16px;
-  letter-spacing: 1px;
-  margin-top: 13px;
-  margin-bottom: 8px;
-  text-transform: capitalize;
-}
-
-.service-content p {
-  color: #767676;
-  font-size: 14px;
-  font-weight: 300;
-  line-height: 24px;
-}
-
-/*=========06. resume==========*/
-
-.col-horizontal {
-  padding-bottom: 16px;
-  border-bottom: 1px solid #767676;
-}
-
-.col-horizontal:last-child {
-  border-bottom: 0;
-}
-
-h3.resume-subtitle {
-  font-size: 30px;
-  margin-left: 15px;
-  margin-top: 12px;
-  text-transform: capitalize;
-}
-
-.col-horizontal .col-item {
-  float: left;
+.clock-leafs .clock-leaf:nth-child(2) > * {
   width: 50%;
-  padding: 0 15px;
+  height: 100%;  
+  background: #B18686 0% 0% no-repeat padding-box;
+  border: 1px solid #DCB1B1;
+
 }
-
-.experience-year {
-  background-color: #000;
-  color: #fff;
-  display: inline-block;
-  padding: 4px 20px;
-  margin-top: 15px;
-  margin-bottom: 10px;
-}
-
-.resume-detail h4 {
-  font-size: 16px;
-  line-height: 30px;
-  text-transform: capitalize;
-}
-
-.resume-detail h6 {
-  font-size: 12px;
-  margin-bottom: 9px;
-  text-transform: capitalize;
-}
-
-.resume-detail p {
-  line-height: 22px;
-}
-
-/*=========07. quote==========*/
-
-.quotes {
-  background-image: url(../images/abg.jpg);
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
+.clock-leafs .clock-leaf:nth-child(2) > :nth-child(1) {
+  border-right: none;
+  border-top-left-radius: 93%;
   position: relative;
-  width: 100%;
+  left: 1px;
+}
+.clock-leafs .clock-leaf:nth-child(2) > :nth-child(2) {
+  border-left: none;
+  border-top-right-radius: 93%;
 }
 
 
-.quote-inner {
-  color: #fff;
-  text-align: center;
+/*clock-leaf3---------------------------------*/
+
+.clock-leafs .clock-leaf:nth-child(3){
+  position: absolute;
+  display: flex;
+  transform: rotate(140deg);
+  width:70px;
+  height:10px;
+  left:80px;
+  top:-13px;
 }
+.clock-leafs .clock-leaf:nth-child(3) > * {
+  width: 50%;
+  height: 100%;  
+  background: #B18686 0% 0% no-repeat padding-box;
+  border: 1px solid #DCB1B1;
 
-.quote-inner h3 {
-  font-size: 28px;
-  text-transform: capitalize;
 }
-
-.quote-inner p {
-  font-size: 14px;
-  margin-top: 12px;
-}
-
-.quote-inner a {
-  color: #fff;
-  border: 1px solid #fff;
-  border-radius: 11px;
-  padding: 12px 49px;
-  display: inline-block;
-  margin-top: 22px;
-  text-transform: uppercase;
-  letter-spacing: 3px;
-}
-
-/*=========08.  Latest Work==========*/
-
-.portfolio {
-  background-color: #f7f7f7;
-}
-
-.col-work {
-  float: left;
-  width: 33.3333333333%;
-  padding: 0 15px;
-}
-
-.col-work a {
-  display: block;
-  margin-bottom: 14px;
+.clock-leafs .clock-leaf:nth-child(3) > :nth-child(1) {
+  border-right: none;
+  border-top-left-radius: 93%;
   position: relative;
-  -webkit-transition: .2s linear;
-  -moz-transition: .2s linear;
-  -ms-transition: .2s linear;
-  -o-transition: .2s linear;
-  transition: .2s linear;
-  top: 0;
-  left: 0;
+  left: 1px;
+}
+.clock-leafs .clock-leaf:nth-child(3) > :nth-child(2) {
+  border-left: none;
+  border-top-right-radius: 93%;
 }
 
-.col-work a:hover {
-  box-shadow: 0 16px 22px 0 rgba(90, 91, 95, 0.3);
+
+/*時鐘本體---------------------------------*/
+.clock-circles .clock-circle:nth-child(1){
+  position: absolute;
+  top: 185px;
+  left: 217px;
+  width: 296px;
+  height: 296px;
+  border-radius: 50%;
+  background: #FEE7E7;
+  opacity: 1;
+}
+
+.clock-circles .clock-circle:nth-child(2){
+  position: absolute;
+  top: 155px;
+  left: 282px;
+  width: 148px;
+  height: 148px;
+  border-radius: 100%  0 0 0;
+  transform: rotate(40deg);
+  background: #F15353;
+  opacity: 0.5;
+}
+
+.clock-circles .clock-circle:nth-child(3){
+  position: absolute;
+  top: 233px;
+  left: 266px;
+  width: 198px;
+  height: 198px;
+  border-radius: 50%;
+  transform: rotate(40deg);
+  background: #E96D6D;
+  opacity: 1;
+}
+/*時鐘指針---------------------------------*/
+.clock-pointers .clock-pointer:nth-child(1){
+  position: absolute;
+  top: 323px;
+  left: 356px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #FAC3D3;
+  opacity: 1;
+  z-index: 2;
+}
+
+.clock-pointers .clock-pointer:nth-child(2){
+  position: absolute;
+  top: 267px;
+  left: 396px;
+  width: 13px;
+  height: 86px;
+  transform: rotate(60deg);
+  background: #FF6066;
+  box-shadow: 4px 0px 6px #00000029;
+  opacity: 1;
+  z-index: 1;
+}
+
+.clock-pointers .clock-pointer:nth-child(2)::before {
+  position: absolute;
+  content: "";
+  top: -6px;
+  width: 13px;
+  height: 13px;
+  background: #FF6066;
+  border-radius: 50%;
+  opacity: 1;
+}
+
+.clock-pointers .clock-pointer:nth-child(3){
+  position: absolute;
+  top: 280px;
+  left: 326px;
+  width: 13px;
+  height: 64px;
+  transform: rotate(-60deg);
+  background: #F23F46;
+  box-shadow: -4px 1px 6px #00000029;
+  opacity: 1;
+}
+
+.clock-pointers .clock-pointer:nth-child(3)::before{
+  position: absolute;
+  content: "";
   top: -5px;
+  width: 13px;
+  height: 13px;
+  background: #F23F46;
+  border-radius: 50%;
+  opacity: 1;
 }
 
-
-/*=========09.  contact-form==========*/
-
-.contact-content {
-  width: 65%;
-  margin: 0 auto;
+/*---------------------------------*/
+.clock-time {
+  position: absolute;
+  display: flex;
+  top:400px;
+  left:222px;
   text-align: left;
+  width: 111px;
+  height: 106px;
+  font: 106px Roboto;
+  color: #707070;
 }
-/*======
-.contact-form {
-  width: 65%;
-  margin: 0 auto;
+
+.clock-time p:nth-child(2){
+  padding: 2px;
+}
+
+.pause-bottom  {
+  position: absolute;
+  display: flex;
+  top:685px;
+  left:255px;
+
+}
+
+.pause-bottom .bottom-shape{  
+  width: 208px;
+  height: 48px;
+  background: #F7F0F0 0% 0% no-repeat padding-box;
+  border: 2px solid #E96D6D;
+  border-radius: 25px;
+  opacity: 1;
+
+}
+
+.pause-bottom .bottom-shape p {
+  position: absolute;
+  top:-18px;
+  font: 26px Roboto Mono;
   text-align: center;
+  color: #E96D6D;
+  width: 100%;
 }
-.contact-form .form-input:first-child,
-.contact-form .form-input:nth-child(2) {
+
+.pause-bottom .reset-icon{
+  position: absolute;
+  top:2px;
+  left:230px;
+}
+
+/*task-----------------------------------------------------------------------------------*/
+#content .task {
   float: left;
-  width: 50%;
-  padding: 0 15px;
+  width: 30%;
+  padding: 0 5px;
 }
 
-.contact-form .form-input:nth-child(3) {
-  width: 100%;
-  padding: 0 15px;
+.task h1{
+  position: absolute;
+  top: 228px;
+  left: 803px;
+  font: 34px Roboto
 }
 
-.contact-form input.form-style {
-  width: 100%;
-  border: none;
-  border-bottom: 1px solid #333;
-  text-transform: capitalize;
-  padding-bottom: 19px;
-  margin-bottom: 12px;
-  outline: none;
+.task .todolist{
+  position: absolute;
+  top: 312px;
+  left: 739px;
+  width: 380px;
+  height: 330px;
+  background: #FFF2F2 0% 0% no-repeat padding-box;
+  box-shadow: 6px 4px 6px #00000029;
+  border-radius: 10px;
 }
 
-.contact-form textarea {
-  width: 100%;
-  border: none;
-  border-bottom: 1px solid #333;
-  outline: none;
+.task .todolist .straight-line .line {
+  position: absolute;
+  top: 50px;
+  left: 50px;
+  width: 1px;
+  height: 230px;
+  background:#AAAAAA;
 }
 
-.form-submit {
+.task .todolist .straight-line .doing{
+  position: absolute;
+  top: 40px;
+  left: 40px;
+  width: 21px;
+  height: 21px;
+  border-radius: 50%;
+  background:#F64E7DE8;
+}
+
+.task .todolist .straight-line .doing::after{
+  position: absolute;
+  top:6px;
+  left: 8px;
+  border-style: solid;
+  width: 0;
+  height: 0;
+  border-width:4px 0 4px 6px;
+  border-color: transparent transparent transparent #FFFFFF ;
+  z-index: 1;
+  content: "";
+}
+
+
+.task .todolist .straight-line .todo > * {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border:1px solid #F75E89;
+  background:transparent;
+  margin: 2px;
+  opacity: 0.5;
+}
+
+.task .todolist .straight-line .todo > :nth-child(1){
+  position: absolute;
+  top: 90px;
+  left: 41px;
+}
+
+.task .todolist .straight-line .todo > :nth-child(2){
+  position: absolute;
+  top: 134px;
+  left: 41px;
+}
+
+.task .todolist .straight-line .todo > :nth-child(3){
+  position: absolute;
+  top: 178px;
+  left: 41px;
+}
+
+.task .todolist .straight-line .todo > :nth-child(4){
+  position: absolute;
+  top: 224px;
+  left: 41px;
+}
+
+
+.task .todolist ul {
+  position: absolute;
+  top: 20px;
+  left: 55px;
+  font: 16px Roboto;
+  color: #AAAAAA
+}
+
+
+.task .todolist ul .firsttask {
+  font: 21px Roboto;
+  color:#000000;
+}
+
+
+.new-task{
+  position: absolute;
+  top: 672px;
+  left: 739px;
+  width: 340px;
+  height: 54px;
+  padding-left: 41px;
+  background: #F5D3D3;
+  box-shadow: 6px 4px 6px #00000029;
+  border-radius: 10px;
   text-align: left;
-  padding: 0 15px;
+  font: Medium 30px Roboto Mono;
+  letter-spacing: 0;
+  color: #000000;
 }
 
-.form-submit input {
-  font-size: 16px;
-  text-transform: capitalize;
-  background-color: transparent;
-  border: 1px solid #000;
-  border-radius: 12px;
-  padding: 15px 60px;
-  margin-top: 16px;
-  margin-bottom: 14px;
-  cursor: pointer;
-  -webkit-transition: .4s linear;
-  -moz-transition: .4s linear;
-  -ms-transition: .4s linear;
-  -o-transition: .4s linear;
-  transition: .4s linear;
+.new-task::before{
+  content: "";
+  position: absolute;
+  top:25px;
+  left:330px;
+  width: 25px;
+  height: 4px;
+  background: #971616;
 }
-
-.form-submit input:hover {
-  background-color: #000;
-  color: #fff; 
-}               =======*/
-                 
-
-
-/*=========10.  footer==========*/
-
-footer {
-  padding: 80px 0;
-  background-color: #000;
-  color: #fff;
-  text-align: center;
-}
-
-.footer-content p {
-  line-height: 22px;
-}
-
-.footer-social-icon a i {
-  color: #fff;
-  display: inline-block;
-  font-size: 14px;
-  line-height: 20px;
-  margin-top: 15px;
-  margin-right: 15px;
-}
-
-/*=========rwd==========*/
-
-@media screen and (min-width: 768px) {
-  .menu-button,
-  .menu-button-checkbox {
-    display: none;
-  }
+.new-task::after{
+  content: "";
+  position: absolute;
+  top:15px;
+  left:340px;
+  width: 4px;
+  height: 25px;
+  background: #971616;
 }
 
 
-@media screen and (max-width: 767px) {
-  /*=========02. Header ==========*/
-  .container {
-    width: auto;
-  }
+/*nav-----------------------------------------------------------------------------------*/
+#content .nav {
+  display: block;
+  float: right;
+  width: 15%;
+  margin: 0px;
+  padding: 0px;
+}
 
-  .menu-button {
-    float: right;
-    font-size: 25px;
-    line-height: 40px;
-    color: white;
-    background: transparent;
-    padding: 0 15px;
-    border: 0;
-  }
-  
-  .menu-button-checkbox {
-    opacity: 0;
-    position: fixed;
-    top: 0;
-    right: 0;
-    width: 55px;
-    height: 40px;
-  }
-
-  .menu-button-checkbox:checked ~ .nav {
-    display: block;
-  }
-
-
-  .nav {
-    display: none;
-    margin-top: 0;
-    padding-left: 0;
-    position: fixed;
-    right: 0;
-    top: 40px;
-    width: 100px;
-    height: 100%;
-    background: black
-  }
-
-  .nav li {
-    border: 0;
-    border-radius: 0;  
-  }
-
-/*=========03. Homepage Background Image ==========*/
-  .home_bg{
-    width: 100%;  
-  }
-/*=========04. about me==========*/  
-  .col-left {
-    width: 100%; 
-  }
-
-  .avatar { 
-    display: block;
-    margin: 10px auto;
-  }
-  
-  .avatar img{ 
-    width: 60%;
-    margin: 10px auto; 
-  }
-
-  .col-right {
-    width: 100%;
-  }
-
-/*=========05. what i offer==========*/
- .service-content {
-    width: 100%;
-  }
-/*=========06. resume==========*/
-  .col-horizontal .col-item {
-    width: 100%;
-  }
-
-/*=========08.  Latest Work==========*/
-  .col-work {
-    width: 100%;
-  }
-
-
+nav {
+  float: right;
+  width: 96px;
+  height: 800px;
+  background:#E96D6D;
 }
 
 
+/*nav layout-----------------------------------*/
+nav ul > * {
+  position: relative;
+  left:-40px;
+  margin-top:45px; 
+}
+nav ul li:nth-child(1) > img{
+  box-shadow: 0px 3px 6px #00000029;
+}
 
+nav ul li:nth-child(2){
+  left:-10px;
+}
 
-
-
-
-
-
-
-
-
-
-
+nav ul li:nth-child(3){
+  left:-15px;
+}
 
