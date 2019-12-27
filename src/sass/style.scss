@@ -265,11 +265,12 @@
     h1{
       position: relative;
       top: 198px;
-      left: 43px;
-      width: 190px;
-      height: 34px;
-      font: 25px Roboto;
+      left: 63px;
+      width: 240px;
+      height: 40px;
+      font: 28px Roboto;
       color: #707070;
+      font-weight:bold;
     }
 
     .todolist{
@@ -285,11 +286,24 @@
       box-shadow: 6px 4px 6px #00000029;
       border-radius: 10px;
       opacity: 0.5;
+      z-index: -1;
 
       .doing-container {
         display: flex;
         padding-top: 24px;
         padding-left: 32px;
+        opacity: 1;
+
+        &::before{
+          position:absolute;
+          top: 50px;
+          left: 45px; 
+          content: "";
+          width: 1px;
+          height: 260px;
+          background: #707070;
+          z-index: -1;
+        } 
 
         .doing-icon-container{
           display: flex;
@@ -301,40 +315,25 @@
           .doing-icon{
             width: 21px;
             height: 21px;
-
-            :nth-child(1) {
-              border-radius: 50%;
-              background:#F64E7DE8;
-              z-index: 1;
-
-            }
-            :nth-child(2) {
-              top:6px;
-              left: 8px;
-              border-style: solid;
-              width: 0;
-              height: 0;
-              border-width:4px 0 4px 6px;
-              border-color: transparent transparent transparent #FFFFFF;
-              z-index: 2;
-            }
-          }
+            margin-top: 3px;
 
           p{
             flex-wrap: wrap;
             width: 230px;
             height: 21px;
             font: 21px Roboto;
-            letter-spacing: 0;
-            color: #707070;
+            color: #000000;
             padding-left: 10px;
             opacity: 1;
+          }          
           }
         }
       }
       .todo-container {
         display: flex;
-        padding-left: 32px;
+        padding-left: 33px;
+        
+
         .todo-icon-container {
           display: flex;
           justify-content: center;
@@ -347,6 +346,7 @@
             border-radius: 50%;
             background: #FAF4F5E8;
             border: 1px solid #F75E89;
+
           }
 
           p{
@@ -398,11 +398,11 @@
           height: 25px;
           background: #971616;
 
-        }        
-        
+        }                
       }
     }
   }
+
   nav{
     position: fixed;
     top: 0px;
@@ -445,5 +445,4 @@
     }    
   }
 }
-
 
