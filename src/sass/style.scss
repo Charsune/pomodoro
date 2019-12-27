@@ -1,0 +1,449 @@
+* {
+  box-sizing: border-box;
+}
+
+#content {
+  display: flex;
+  justify-content: space-around; 
+
+  .clock {
+    display: flex;
+    flex-direction: column;
+
+
+    .clock-shape {
+      display: flex;
+
+      .clock-leafs {
+        position: relative;
+        top: 149px;
+        left: 142px;
+
+        .clock-leaf {
+          &:nth-child(1) {
+            position: absolute;
+            display: flex;
+            width: 70px;
+            height: 10px;
+            transform: rotate(200deg);
+
+            > * {
+              width: 50%;
+              height: 100%;  
+              border: 1px solid #DCB1B1;
+              background: #B18686 0% 0% no-repeat;
+            }
+
+            > :nth-child(1) {
+              border-right: none;
+              border-top-left-radius: 93%;
+              position: relative;
+              left: 1px;
+            }
+
+            > :nth-child(2) {
+              border-left: none;
+              border-top-right-radius: 93%;
+            }
+          }
+
+          &:nth-child(2) {
+            position: absolute;
+            left: 57px;
+            top: -17px;
+            display: flex;
+            width: 47px;
+            height: 7px;
+            transform: rotate(92deg);
+
+            > * {
+              width: 50%;
+              height: 100%;  
+              border: 1px solid #DCB1B1;
+              background: #B18686 0% 0% no-repeat;
+            }
+            
+            > :nth-child(1) {
+              border-right: none;
+              border-top-left-radius: 93%;
+              position: relative;
+              left: 1px;
+            }
+            
+            > :nth-child(2) {
+              border-left: none;
+              border-top-right-radius: 93%;
+            }
+          } 
+
+          &:nth-child(3) {
+            position: absolute;
+            left: 80px;
+            top: -13px;
+            display: flex;
+            width: 70px;
+            height: 10px;
+            transform: rotate(140deg);
+
+            > * {
+              width: 50%;
+              height: 100%;  
+              border: 1px solid #DCB1B1;
+              background: #B18686 0% 0% no-repeat;              
+            }
+
+            > :nth-child(1) {
+              border-right: none;
+              border-top-left-radius: 93%;
+              position: relative;
+              left: 1px;
+            }
+            
+            > :nth-child(2) {
+              border-left: none;
+              border-top-right-radius: 93%;
+            }
+          }
+        }
+      }
+
+      .clock-circles {
+        position: relative;
+        top: 176px;
+        left: 85px;
+
+        .clock-circle {
+          &:nth-child(1) {
+            width: 296px;
+            height: 296px;
+            border-radius: 50%;
+            background: #FEE7E7;
+            opacity: 1;
+          }
+
+          &:nth-child(2) {
+            position: absolute;
+            top: -30px;
+            left: 64px;
+            width: 148px;
+            height: 148px;
+            border-radius: 100%  0 0 0;
+            transform: rotate(40deg);
+            background: #F15353;
+            opacity: 0.5;
+          }
+          &:nth-child(3) {
+            position: absolute;
+            top: 51px;
+            left: 47px;
+            width: 198px;
+            height: 198px;
+            border-radius: 50%;
+            transform: rotate(40deg);
+            background: #E96D6D;
+            opacity: 1; 
+          }
+        }
+      }
+
+      .clock-pointers {
+        position: absolute;
+        .clock-pointer {
+          &:nth-child(1) {
+            position: absolute;
+            top: 317px;
+            left: 223px;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background: #FAC3D3;
+            z-index: 2;
+          }
+
+          &:nth-child(2){
+            position: absolute;
+            top: 262px;
+            left: 263px;
+            width: 13px;
+            height: 86px;
+            transform: rotate(60deg);
+            background: #FF6066;
+            box-shadow: 4px 0px 6px #00000029;
+            z-index: 1;
+
+            &::before{
+              position: absolute;
+              content: "";
+              top: -6px;
+              width: 13px;
+              height: 13px;
+              background: #FF6066;
+              border-radius: 50%;
+            }
+          }
+
+          &:nth-child(3) { 
+            position: absolute;
+            top: 277px;
+            left: 192px;
+            width: 13px;
+            height: 64px;
+            box-shadow: -4px 1px 6px #00000029;
+            background: #F23F46;
+            transform: rotate(-60deg);
+
+            &::before{
+              content: "";              
+              position: absolute;
+              top: -5px;
+              width: 13px;
+              height: 13px;
+              background: #F23F46;
+              border-radius: 50%;
+            }
+          }
+        }          
+      }
+      .clock-word {
+        position: absolute;
+        top:194px;
+        left:93px;
+
+        p {
+          width: 156px;
+          height: 26px;
+          color: #707070;
+          font-family: 'Roboto Mono';
+          font-weight: 500;
+          transform: rotate(15deg);
+          transform-origin: bottom right;
+        }
+
+        p + p {
+          transform: rotate(0deg);
+        }
+      }
+    }
+
+    .clock-time {
+      position: relative;
+      top: 160px;
+      left: 95px;
+      display: flex;
+      justify-content: center;
+      width: 268px;
+      height: 106px;
+      font: 80px Roboto;
+      color: #707070;
+    }
+
+    .clock-button {
+      display: flex;
+      justify-content: space-around;
+      position: relative;
+      top: 212px;
+      left: 115px;
+      width: 288px;
+      height: 48px;
+      
+      button {
+        width: 208px;
+        height: 48px;
+        border: 2px solid #E96D6D;
+        border-radius: 25px;
+        font: 26px Roboto Mono;
+        color: #E96D6D;
+        background: #F7F0F0 0% 0% no-repeat;
+
+      }
+    }        
+  }
+  .task{
+    display: flex;
+    flex-direction: column;
+    
+    h1{
+      position: relative;
+      top: 198px;
+      left: 43px;
+      width: 190px;
+      height: 34px;
+      font: 25px Roboto;
+      color: #707070;
+    }
+
+    .todolist{
+      position: relative;
+      top: 232px;
+      width: 380px;
+      height: 330px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      padding-bottom: 20px;
+      background: #FFF2F2 0% 0% no-repeat;
+      box-shadow: 6px 4px 6px #00000029;
+      border-radius: 10px;
+      opacity: 0.5;
+
+      .doing-container {
+        display: flex;
+        padding-top: 24px;
+        padding-left: 32px;
+
+        .doing-icon-container{
+          display: flex;
+          justify-content: center;
+          width: 24px;
+          height: 24px;
+          padding-top: 3px;
+          
+          .doing-icon{
+            width: 21px;
+            height: 21px;
+
+            :nth-child(1) {
+              border-radius: 50%;
+              background:#F64E7DE8;
+              z-index: 1;
+
+            }
+            :nth-child(2) {
+              top:6px;
+              left: 8px;
+              border-style: solid;
+              width: 0;
+              height: 0;
+              border-width:4px 0 4px 6px;
+              border-color: transparent transparent transparent #FFFFFF;
+              z-index: 2;
+            }
+          }
+
+          p{
+            flex-wrap: wrap;
+            width: 230px;
+            height: 21px;
+            font: 21px Roboto;
+            letter-spacing: 0;
+            color: #707070;
+            padding-left: 10px;
+            opacity: 1;
+          }
+        }
+      }
+      .todo-container {
+        display: flex;
+        padding-left: 32px;
+        .todo-icon-container {
+          display: flex;
+          justify-content: center;
+          width: 24px;
+          height: 24px;
+          
+          .todo-icon{
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: #FAF4F5E8;
+            border: 1px solid #F75E89;
+          }
+
+          p{
+            flex-wrap: wrap;
+            width: 230px;
+            height: 21px;
+            font: 21px Roboto;
+            letter-spacing: 0;
+            color: #707070;
+
+          }
+        }
+      }
+    }
+    .new-task-button {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      position: relative;
+      top: 270px;
+      width: 376px;
+      height: 54px;
+      background: #F5D3D3;
+      box-shadow: 6px 4px 6px #00000029;
+      border-radius: 10px;
+        
+      p {
+        font: 26px Roboto Mono;
+        color: #000000;
+      }
+
+      .new-task-icon{
+        position: relative;
+        .vertical {
+          position: absolute;
+          top: 0px;
+          left: -10px;
+          width: 25px;
+          height: 4px;
+          background: #971616;
+
+        }
+
+        .straight {
+          position: absolute;
+          top: -10px;
+          left: 0px;
+          width: 4px;
+          height: 25px;
+          background: #971616;
+
+        }        
+        
+      }
+    }
+  }
+  nav{
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    width: 96px;
+    height: 800px;
+    background: #E96D6D 0% 0% no-repeat;
+    z-index: 1;
+    
+    a{
+      margin-bottom: 20px;
+
+      :nth-child(1){
+        position: relative;
+        width: 96px;
+        height: 72px;
+
+        > img{
+          box-shadow: 0px 3px 6px #00000029;
+        }  
+      }
+
+      &:nth-child(2){
+        > img {
+          margin-top: 39px;
+          margin-left: 27px;
+          width: 43px;
+          height: 47px;
+        }  
+      }
+
+      &:nth-child(3){
+        > img{
+          margin-top: 57px;
+          margin-left: 23px;
+          width: 51px;
+          height: 51px;
+        } 
+      }
+    }    
+  }
+}
+
+
