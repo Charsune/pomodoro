@@ -9,7 +9,7 @@ module.exports = function(grunt) {
           cacheLocation: 'src/sass/'
         },
         files: {
-          'css/style.css': 'src/sass/style.scss'
+          'public/css/style.css': 'src/sass/style.scss'
         }
       }
     },
